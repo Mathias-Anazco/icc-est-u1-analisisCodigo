@@ -173,8 +173,8 @@ public class MetodosOrdenamiento {
     }
 
     // Método de inserción con errores
-    // Error encontrado: Al momento de retornar estamos retornando otro arreglo
-    // Lo correcto es el return arreglo;
+    // Error encontrado: Al momento de retornar estamos retornando otro arreglo tambien no es i -- es ++ 
+    // Lo correcto es el return arreglo; cambiamos el signo para que imprima ascendente y la variable i es = j - 1
     public int[] insercionTercero(int[] arregloOriginal) {
 
         int[] arreglo = Arrays.copyOf(arregloOriginal, arregloOriginal.length);
@@ -182,7 +182,7 @@ public class MetodosOrdenamiento {
             int key = arreglo[j];
             int i = j - 1;
 
-            while (i > 0 && arreglo[i] > key) {
+            while (i >= 0 && arreglo[i] > key) {
                 arreglo[i + 1] = arreglo[i];
                 i--;
             }
